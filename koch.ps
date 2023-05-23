@@ -1,0 +1,31 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%
+/angle 60 def
+/linesize 5 def
+/N 4 def
+/F
+{
+    1 dict begin
+    /maxdepth exch def
+    maxdepth 0 gt {
+        maxdepth 1 sub F
+	               Plus
+        maxdepth 1 sub F
+	               Minus
+	               Minus
+        maxdepth 1 sub F
+	               Plus
+        maxdepth 1 sub F
+    } 
+    { linesize 0 lineto linesize 0 translate}
+    ifelse
+    end
+} def
+/Plus { angle rotate} def
+/Minus { angle neg rotate} def
+
+50 600 translate
+0 0 moveto
+N F Minus Minus
+N F Minus Minus
+N F stroke

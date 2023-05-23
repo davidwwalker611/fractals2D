@@ -1,0 +1,56 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%
+/rgbcol [[0 0 1] [1 0 1] [1 0 0] [1 0.67 0] [1 1 0] [0 1 0] [1 0.67 0.67] [0 1 1]] def 
+/angle 90 def
+/linesize 4 def
+/N 6 def
+/X
+{
+    1 dict begin
+    /maxdepth exch def
+    maxdepth 0 gt {
+	               Plus
+        maxdepth 1 sub Y
+        maxdepth 1 sub F
+	               Minus
+        maxdepth 1 sub X
+        maxdepth 1 sub F
+        maxdepth 1 sub X
+	               Minus
+        maxdepth 1 sub F
+        maxdepth 1 sub Y
+	               Plus
+    } if
+    end
+} def
+/Y
+{
+    1 dict begin
+    /maxdepth exch def
+    maxdepth 0 gt {
+	               Minus
+        maxdepth 1 sub X
+        maxdepth 1 sub F
+                       Plus
+        maxdepth 1 sub Y
+        maxdepth 1 sub F
+        maxdepth 1 sub Y
+	               Plus
+        maxdepth 1 sub F
+        maxdepth 1 sub X
+	               Minus
+    } if
+    end
+} def
+/Plus { angle rotate} def
+/Minus { angle neg rotate} def
+/F { 1 dict begin
+     /maxdepth exch def
+     rgbcol maxdepth get aload pop setrgbcolor
+     linesize 0 lineto stroke linesize 0 translate 0 0 moveto
+     end
+} def
+
+10 20 translate
+0 0 moveto
+N X 
